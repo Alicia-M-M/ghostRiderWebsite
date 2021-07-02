@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+
+    <!-- Bootstrap CSS -->
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- endbuild -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <title>GhostRider Site</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand zoom-brand" href="index.html">GhostRider</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ghostRiderNavbar"
+            aria-controls="ghostRiderNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bars"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="ghostRiderNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item active item-a text-left text-lg-center">
+                    <a class="nav-link" href="#offSetScroll">MEET THE BIKE</a>
+                </li>
+                <li class="nav-item item-b text-left text-lg-center">
+                    <a class="nav-link" href="techSpecs.html">TECH SPECS</a>
+                </li>
+                <li class="nav-item item-c text-left text-lg-center">
+                    <a class="nav-link" href="shop.html">SHOP</a>
+                </li>
+                <li class="nav-item item-d text-left text-lg-center">
+                    <a class="nav-link" href="contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- hero-graphic -->
+    <div class="container-fluid hero-graphic-a">
+        <div class="row text-center">
+            <div id="bikeVideo">
+                <video autoplay muted loop id="bikeVideoImage">
+                    <source src="img/pexels-pavel-danilyuk-5789979.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="text-overlay col-12 mx-auto">
+                <div class="main-hero-container mx-auto">
+                    <div class="background-text mx-auto ml-xl-0">
+                        <h1 class="hero-message-d">GhostRider</h1>
+                        <h1 class="hero-message-a">UNLIMITED</h1>
+                    </div>
+                    <div class="main-exploration-container">
+                        <h1 class="hero-message-b text-center text-xl-right">EXPLORATION</h1>
+                        <div class="text-xl-right pt-4">
+                            <div class="col-12 pt-4 offset-button-mobile">
+                                <a href="shop.html"><button type="button" class="btn btn-a">
+                                        SHOP
+                                        <svg class="svg-margin-a" width="14px" height="14px" aria-hidden="true"
+                                            focusable="false" data-prefix="fal" data-icon="chevron-double-right"
+                                            class="svg-inline--fa fa-chevron-double-right fa-w-12" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <path fill="currentColor"
+                                                d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                            </path>
+                                        </svg>
+                                    </button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-overlay-arrows pb-4">
+                <a href="#offSetScroll">
+                    <div class="svg-hover-state"><svg width="50" aria-hidden="true" focusable="false" data-prefix="fal"
+                            data-icon="chevron-double-down" class="svg-inline--fa fa-chevron-double-down fa-w-14"
+                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M443.5 98.5l-211 211.1c-4.7 4.7-12.3 4.7-17 0L4.5 98.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0L224 269.9 419.5 74.5c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.6 4.6 4.6 12.2-.1 16.9zm0 111l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 397.9 28.5 202.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.8 4.8-12.4.1-17.1z">
+                            </path>
+                        </svg></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- intro-info -->
+    <div class="container-fluid background-intro" id="offSetScroll">
+        <div class="row mx-auto text-center row-dimentions">
+            <div class="col-md-10 col-12 mx-auto">
+                <h2 class="text-spacing">GhostRider</h2>
+                <h3 class="text-spacing header-text-gradient">A RIDE UNLIKE ANY OTHER</h3>
+                <p>Introducing the Ghost Rider, built in partnership with Tour de France Champion Pierre Gerard, you
+                    won’t find anything quite like it.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- bike-info original-->
+    <div class="container-fluid background-bike-repeat bike-info-lg heightDims">
+        <div class="row">
+            <div class="col-12 mx-auto marginDims">
+                <div class="scene section" id="sticky">
+                    <h1 class="text-parallax-top mt-4 pt-4">THE ROAD TO</h1>
+                    <h1 class="text-parallax-bottom pt-4">YOUR FUTURE</h1>
+                    <div class="viewer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bike-info-mobile -->
+    <div class="container-fluid background-bike bike-info-mobile">
+        <div class="row">
+            <div class="col-12 mx-auto text-center pb-2 pt-3">
+                <img id="myimg" class="col-8 img-responsive pb-5" src="/img/1.png">
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile techSpec -->
+    <div class="container-fluid background-footer mobile-text-overlay-header-a">
+        <div class="row text-center">
+            <div class="background-text-a mx-auto text-overlay-header-b col-10">
+                <h3><span class="header-text-b revolution-xxs">A </span><span
+                        class="revolution-xxs">REVOLUTION</span></br><span class="header-text-b revolution-xxs">IN
+                    </span><span class="header-text-gradient revolution-xxs">REVOLUTION</span></h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12 mx-auto pb-5">
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                        <p class="mb-4">Sustainable high-performance materials, and next generation manufacturing
+                            techniques put Ghost Rider at the front of the pack.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 pt-1 mx-auto">
+                        <a href="techSpecs.html"><button type="button" class="btn btn-b">
+                                CHOOSE YOUR RIDE
+                                <svg class="svg-margin-a" width="14px" height="14px" aria-hidden="true"
+                                    focusable="false" data-prefix="fal" data-icon="chevron-double-right"
+                                    class="svg-inline--fa fa-chevron-double-right fa-w-12" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                    <path fill="currentColor"
+                                        d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                    </path>
+                                </svg>
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- tech-specs -->
+    <div class="container-fluid background-techSpec">
+        <div class="row text-center tech-row-height">
+            <div class="col-lg-10 col-xl-8 mx-auto text-overlay-header">
+                <div class="row">
+                    <div class="background-text-a mx-auto text-overlay-header-a">
+                        <h3><span class="header-text-b">A </span><span>REVOLUTION</span> <span class="header-text-b">IN
+                            </span><span class="header-text-gradient">REVOLUTION</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="background-text-b mx-auto">
+                        <div class="row">
+                            <p class="text-spacing col-10 mx-auto pt-5">Sustainable high-performance materials, and next
+                                generation manufacturing techniques put Ghost Rider at the front of the pack.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 pt-4">
+                                <a href="techSpecs.html"><button type="button" class="btn btn-b">
+                                        CHOOSE YOUR RIDE
+                                        <svg class="svg-margin-a" width="14px" height="14px" aria-hidden="true"
+                                            focusable="false" data-prefix="fal" data-icon="chevron-double-right"
+                                            class="svg-inline--fa fa-chevron-double-right fa-w-12" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <path fill="currentColor"
+                                                d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                            </path>
+                                        </svg>
+                                    </button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-auto text-center row-dimentions">
+            <div class="col-md-10 col-xl-12 col-12 mx-auto">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="img/icon-1.png" class="img-fluid text-spacing-e icon-dims" alt="cog">
+                        <h4 class="text-spacing-a header-text-c">BESPOKE DOWN TO THE SPOKES</h4>
+                        <div class="row">
+                            <div class="col-12 col-sm-10 col-lg-12 mx-auto">
+                                <h5 class="text-spacing-a">Customized one fiber at a time for a truly lightweight and
+                                    durable
+                                    ride
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="img/icon-2.png" class="img-fluid text-spacing-e icon-dims" alt="cog">
+                        <h4 class="text-spacing-a header-text-c">AN INDUSTRIAL TOUR DE FORCE</h4>
+                        <div class="row">
+                            <div class="col-12 col-sm-10 col-lg-12 mx-auto">
+                                <h5 class="text-spacing-a">Industrial strength continuous Carbon Fiber for long lasting
+                                    reliability
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="img/icon-3.png" class="img-fluid text-spacing-e icon-dims" alt="cog">
+                        <h4 class="text-spacing-a header-text-c">MASTER OF ALL TERRAINS
+                        </h4>
+                        <div class="row">
+                            <div class="col-12 col-sm-10 col-lg-12 mx-auto">
+                                <h5 class="text-spacing-a">Revolutionary organic shock absorbtion for the versatility of
+                                    pavement to
+                                    pathway.</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 pt-4">
+                        <a href="techSpecs.html"><button type="button" class="btn btn-c">
+                                TECH SPECS
+                                <svg class="svg-margin-a" width="14px" height="14px" aria-hidden="true"
+                                    focusable="false" data-prefix="fal" data-icon="chevron-double-right"
+                                    class="svg-inline--fa fa-chevron-double-right fa-w-12" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                    <path fill="currentColor"
+                                        d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                    </path>
+                                </svg>
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- carousel-section -->
+    <div class="container-fluid header background-bike-2-v1 hide-carousel dims-bigger">
+        <div class="row">
+            <div class="col-12 mx-auto parallax-container-b">
+                <h1 class="text-parallax-a-carousel">DISCOVER</h1>
+                <h1 class="text-parallax-b-carousel">YOUR PATH</h1>
+            </div>
+        </div>
+        <div class="row h-100 mx-auto text-center">
+            <div class="col-md-10 col-lg-12 mx-auto my-auto">
+                <div id="carousel-large" class="carousel slide mx-auto" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row h-100">
+                                <div class="col-8 mx-auto my-auto">
+                                    <div class="row">
+                                        <div class="col-6 mx-auto carousel-boxes">
+                                            <div class="row">
+                                                <div
+                                                    class="col-xl-8 col-10 text-overlay-carousel pl-5 pl-xl-0 text-left">
+                                                    <h3 class="text-spacing pl-4 header-text">THE COMPETITIVE EDGE</h3>
+                                                    <p class="text-spacing-c pl-2">Unparralelled weight aerodynamics
+                                                        provide competitive performance</p>
+                                                    <a href="shop.html"><button type="button" class="btn btn-b">
+                                                            SHOP
+                                                            <svg class="svg-margin-a" width="14px" height="14px"
+                                                                aria-hidden="true" focusable="false" data-prefix="fal"
+                                                                data-icon="chevron-double-right"
+                                                                class="svg-inline--fa fa-chevron-double-right fa-w-12"
+                                                                role="img" xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 384 512">
+                                                                <path fill="currentColor"
+                                                                    d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                                                </path>
+                                                            </svg>
+                                                        </button></a>
+                                                </div>
+                                            </div>
+                                            <div class="inner-item">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mx-auto">
+                                            <div class="inner-item-b">
+                                                <div class="image-wrapper-a">
+                                                    <div class="img-skewed-a"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row h-100">
+                                <div class="col-8 mx-auto my-auto">
+                                    <div class="row">
+                                        <div class="col-6 mx-auto carousel-boxes">
+                                            <div class="row">
+                                                <div
+                                                    class="col-xl-8 col-10 text-overlay-carousel pl-5 pl-xl-0 text-left">
+                                                    <h3 class="text-spacing pl-4 header-text">DESIGNED BY THE BEST</h3>
+                                                    <p class="text-spacing-c pl-2">Designed in collaboration with Tour
+                                                        de France 2021 Gold medalist Pierre Gerard</p>
+                                                    <a href="shop.html"><button type="button" class="btn btn-b">
+                                                            SHOP
+                                                            <svg class="svg-margin-a" width="14px" height="14px"
+                                                                aria-hidden="true" focusable="false" data-prefix="fal"
+                                                                data-icon="chevron-double-right"
+                                                                class="svg-inline--fa fa-chevron-double-right fa-w-12"
+                                                                role="img" xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 384 512">
+                                                                <path fill="currentColor"
+                                                                    d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                                                </path>
+                                                            </svg>
+                                                        </button></a>
+                                                </div>
+                                            </div>
+                                            <div class="inner-item">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mx-auto">
+                                            <div class="inner-item-b">
+                                                <div class="image-wrapper-b">
+                                                    <div class="img-skewed-b"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row h-100">
+                                <div class="col-8 mx-auto my-auto">
+                                    <div class="row">
+                                        <div class="col-6 mx-auto carousel-boxes">
+                                            <div class="row">
+                                                <div
+                                                    class="col-xl-8 col-10 text-overlay-carousel pl-5 pl-xl-0 text-left">
+                                                    <h3 class="text-spacing pl-4 header-text">EXTREME HARDWARE</h3>
+                                                    <p class="text-spacing-c pl-2">Performance parts from Shimano that
+                                                        you can trust from the start to the finish line.</p>
+                                                    <a href="shop.html"><button type="button" class="btn btn-b">
+                                                            SHOP
+                                                            <svg class="svg-margin-a" width="14px" height="14px"
+                                                                aria-hidden="true" focusable="false" data-prefix="fal"
+                                                                data-icon="chevron-double-right"
+                                                                class="svg-inline--fa fa-chevron-double-right fa-w-12"
+                                                                role="img" xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 384 512">
+                                                                <path fill="currentColor"
+                                                                    d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                                                </path>
+                                                            </svg>
+                                                        </button></a>
+                                                </div>
+                                            </div>
+                                            <div class="inner-item">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mx-auto">
+                                            <div class="inner-item-b">
+                                                <div class="image-wrapper-c">
+                                                    <div class="img-skewed-c"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel-large" role="button" data-slide="prev">
+                        <span class="pl-0" aria-hidden="true"><svg width="50" aria-hidden="true" focusable="false"
+                                data-prefix="fal" data-icon="chevron-double-left"
+                                class="svg-inline--fa fa-chevron-double-left fa-w-12" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path fill="currentColor"
+                                    d="M349.5 475.5l-211.1-211c-4.7-4.7-4.7-12.3 0-17l211.1-211c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L178.1 256l195.5 195.5c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.6-12.3 4.6-17-.1zm-111 0l7.1-7.1c4.7-4.7 4.7-12.3 0-17L50.1 256 245.5 60.5c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0l-211.1 211c-4.7 4.7-4.7 12.3 0 17l211.1 211c4.8 4.8 12.4 4.8 17.1.1z">
+                                </path>
+                            </svg></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-large" role="button" data-slide="next">
+                        <span aria-hidden="true"><svg aria-hidden="true" width="50" focusable="false" data-prefix="fal"
+                                data-icon="chevron-double-right" class="svg-inline--fa fa-chevron-double-right fa-w-12"
+                                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path fill="currentColor"
+                                    d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                </path>
+                            </svg></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- carousel section breakpoint below lg-->
+    <div class="container-fluid hide-carousel-mobile">
+        <div class="row">
+            <div class="col-12 px-0">
+                <div id="carousel-small" class="carousel slide background-intro" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <div class="background-bike bike-image-container-b">
+                                    </div>
+                                    <div class="row">
+                                        <div class="background-footer bike-image-container col-12">
+                                            <div class="centered-bike">
+                                                <img src="img/bike-carousel-v1.png" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-10 mx-auto mb-2 text-center pb-4">
+                                    <h3 class="max-sentence header-text mx-auto">THE COMPETITIVE EDGE</h3>
+                                    <p class="max-paragraph col-sm-12 col-10 mx-auto">
+                                        Unparralelled weight
+                                        aerodynamics provide competitive performance.</p>
+                                    <a href="shop.html"><button type="button" class="btn btn-b">
+                                            SHOP
+                                            <svg class="svg-margin-a" width="14px" height="14px" aria-hidden="true"
+                                                focusable="false" data-prefix="fal" data-icon="chevron-double-right"
+                                                class="svg-inline--fa fa-chevron-double-right fa-w-12" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                <path fill="currentColor"
+                                                    d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                                </path>
+                                            </svg>
+                                        </button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <div class="background-bike bike-image-container-b">
+                                    </div>
+                                    <div class="row">
+                                        <div class="background-footer bike-image-container col-12">
+                                            <div class="centered-bike">
+                                                <img src="img/bike-carousel-2-v2.png" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-10 mx-auto mb-2 text-center pb-4">
+                                    <h3 class="max-sentence header-text mx-auto">DESIGNED BY THE BEST</h3>
+                                    <p class="max-paragraph col-sm-12 col-10 mx-auto">Designed in
+                                        collaboration with
+                                        Tour de France 2021 Gold medalist Pierre Gerard.</p>
+                                    <a href="shop.html"><button type="button" class="btn btn-b">
+                                            SHOP
+                                            <svg class="svg-margin-a" width="14px" height="14px" aria-hidden="true"
+                                                focusable="false" data-prefix="fal" data-icon="chevron-double-right"
+                                                class="svg-inline--fa fa-chevron-double-right fa-w-12" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                <path fill="currentColor"
+                                                    d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                                </path>
+                                            </svg>
+                                        </button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <div class="background-bike bike-image-container-b">
+                                    </div>
+                                    <div class="row">
+                                        <div class="background-footer bike-image-container col-12">
+                                            <div class="centered-bike">
+                                                <img src="img/bike-carousel-3-v2.png" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-10 mx-auto mb-2 text-center pb-4">
+                                    <h3 class="header-text max-sentence mx-auto">EXTREME HARDWARE</h3>
+                                    <p class="max-paragraph col-sm-12 col-10 mx-auto ">
+                                        Unparralelled weight
+                                        aerodynamics provide competitive performance.</p>
+                                    <a href="shop.html"><button type="button" class="btn btn-b">
+                                            SHOP
+                                            <svg class="svg-margin-a" width="14px" height="14px" aria-hidden="true"
+                                                focusable="false" data-prefix="fal" data-icon="chevron-double-right"
+                                                class="svg-inline--fa fa-chevron-double-right fa-w-12" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                <path fill="currentColor"
+                                                    d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                                </path>
+                                            </svg>
+                                        </button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev pr-sm-3" href="#carousel-small" role="button" data-slide="prev">
+                            <span aria-hidden="true"><svg width="25" aria-hidden="true" focusable="false"
+                                    data-prefix="fal" data-icon="chevron-double-left"
+                                    class="svg-inline--fa fa-chevron-double-left fa-w-12" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                    <path fill="currentColor"
+                                        d="M349.5 475.5l-211.1-211c-4.7-4.7-4.7-12.3 0-17l211.1-211c4.7-4.7 12.3-4.7 17 0l7.1 7.1c4.7 4.7 4.7 12.3 0 17L178.1 256l195.5 195.5c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.6-12.3 4.6-17-.1zm-111 0l7.1-7.1c4.7-4.7 4.7-12.3 0-17L50.1 256 245.5 60.5c4.7-4.7 4.7-12.3 0-17l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0l-211.1 211c-4.7 4.7-4.7 12.3 0 17l211.1 211c4.8 4.8 12.4 4.8 17.1.1z">
+                                    </path>
+                                </svg></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next pl-sm-3" href="#carousel-small" role="button" data-slide="next">
+                            <span aria-hidden="true"><svg aria-hidden="true" width="25" focusable="false"
+                                    data-prefix="fal" data-icon="chevron-double-right"
+                                    class="svg-inline--fa fa-chevron-double-right fa-w-12" role="img"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                    <path fill="currentColor"
+                                        d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                    </path>
+                                </svg></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- signup-section -->
+    <div class="container-fluid background-signup subscribe-container">
+        <div class="row mx-auto text-center row-dimentions">
+            <div class="col-md-10 col-12 mx-auto">
+                <h3 class="text-spacing header-text-gradient">STAY AT THE FRONT OF THE PACK</h3>
+                <p class="text-spacing">Never miss an update, and be the first to hear about the latest deals and
+                    new
+                    products. We will never share your information with any third parties.</p>
+                <div class="row">
+                    <div class="col-12 pt-2 pt-sm-0">
+                        <form name="contactForm" class="needs-validation mx-auto" novalidate id="forms">
+                            <div class="input-group">
+                                <label for="emailAdress"></label>
+                                <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email"
+                                    class="form-control mx-auto" id="emailAdress" aria-describedby="button-sign-me-up"
+                                    placeholder="EMAIL" autocomplete="off" required="">
+                                <div class="input-group-append mt-5 mt-sm-0 mx-auto">
+                                    <button class="btn btn-d" type="submit" id="button-sign-me-up">SIGN ME
+                                        UP</button>
+                                </div>
+                                <div class="invalid-feedback text-sm-left">
+                                    PLEASE ENTER A VALID EMAIL ADDRESS
+                                </div>
+                                <div class="valid-feedback text-sm-left">
+                                    VALID EMAIL
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <footer class="background-footer container-fluid">
+        <div class="row mx-auto row-dimentions">
+            <div class="col-md-10 col-xl-12 col-12 mx-auto">
+                <div class="row">
+                    <h2 class="col-12 text-spacing-b text-left">GhostRider</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 order-last order-sm-first py-4 pt-sm-0">
+                        <h4 class="text-spacing-b">GHOSTRIDER BIKES</p>
+                            <h5 class="text-spacing-b">C 2021. All rights Reserved.<br>
+                                2012-2021. Irvine California</h5>
+                    </div>
+                    <div class="col-md-4 pb-4">
+                        <h4 class="text-spacing-b">GOT QUESTIONS?</h4>
+                        <a href="mailto:aliciaseal81@gmail.com">
+                            <h5 class="text-white">Contact Us</h5>
+                        </a>
+                        <h5 class="text-spacing-b">Shipping & Returns</h5>
+                        <div class="row">
+                            <div class="col text-spacing-b pb-5 pt-4 py-sm-0 ">
+                                <a href="https://www.instagram.com/" class="iconSize"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/" class="iconSize"><i
+                                        class="fab fa-facebook fa-1.5x"></i></a>
+                                <a href="https://twitter.com/?lang=en" class="iconSize"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="https://weibo.com/us?ssl_rnd=1610053809.2527" class="iconSize"><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pb-4">
+                        <h4 class="text-spacing-b">SUBSCRIBE</h4>
+                        <form name="contactForm" class="needs-validation" novalidate id="forms2">
+                            <div class="input-group">
+                                <label for="emailAdress"></label>
+                                <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="email"
+                                    class="form-control test pl-0 border-bottom" style="color:white" id="emailAdress"
+                                    aria-describedby="button-sign-me-up" placeholder="EMAIL" autocomplete="off"
+                                    required="">
+                                <div class="input-group-append">
+                                    <button class="btn px-0 py-0 border-bottom" type="submit"
+                                        id="button-sign-me-up"><svg width="10" aria-hidden="true" focusable="false"
+                                            data-prefix="fal" data-icon="chevron-double-right"
+                                            class="svg-inline--fa fa-chevron-double-right fa-w-12" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <path fill="currentColor"
+                                                d="M34.5 36.5l211.1 211c4.7 4.7 4.7 12.3 0 17l-211.1 211c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L205.9 256 10.5 60.5c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.6-4.6 12.2-4.6 16.9.1zm111 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17L333.9 256 138.5 451.5c-4.7 4.7-4.7 12.3 0 17l7.1 7.1c4.7 4.7 12.3 4.7 17 0l211.1-211c4.7-4.7 4.7-12.3 0-17l-211.1-211c-4.8-4.8-12.4-4.8-17.1-.1z">
+                                            </path>
+                                        </svg></button>
+                                </div>
+                                <div class="invalid-feedback text-left text-white">
+                                    PLEASE ENTER A VALID EMAIL ADDRESS
+                                </div>
+                                <div class="valid-feedback text-left text-white">
+                                    VALID EMAIL
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    <!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+    <script src="bike.js"></script>
+    <script src="script.js"></script>
+
+    <!-- endbuild -->
+
+</body>
+
+</html>

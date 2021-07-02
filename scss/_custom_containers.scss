@@ -1,0 +1,388 @@
+@mixin row-dimentions($padding:100px 0, $max-width:1200px){
+    padding:$padding;
+    max-width:$max-width;
+}
+
+@mixin image-background($background-image, $height){
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    height: $height;
+    background-image: $background-image;
+}
+@mixin parallax-text($top, $left, $right, $bottom, $color:$parallaxText){
+    color:$color;
+    top:$top;
+    left:$left;
+    right:$right;
+    bottom:$bottom;
+    object-fit: cover;
+    position: absolute;
+}
+@mixin parallax-background($background-image:$background-image){
+    overflow:hidden;
+    background-image:$background-image;
+    background-position: top center;
+    background-attachment:scroll;
+    background-size: cover;
+    width: 100%;
+}
+@mixin offset-on-click($padding-top, $margin-top){
+    padding-top:$padding-top;
+    margin-top: $margin-top;
+}
+
+// video
+#bikeVideoImage {
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    mix-blend-mode:multiply;
+}
+
+#bikeVideo{
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    top: 0;
+    left: 0;
+    background:linear-gradient(to right,rgba(253, 1, 35, 0.856),rgba(253, 41, 4, 0.767));
+}
+
+.hero-graphic{
+    &-a{
+        position:relative;
+        width:100%;
+        .text-overlay{
+            @include centerItem(50%, translate(-50%, -50%), none);
+            top: 45%;
+            max-width:1600px;
+    
+            &-arrows{
+                @include centerItem(50%, translate(-50%, 0%), 0);
+            }
+        }
+    }
+    &-b{
+        @include md{
+            width:730px; 
+        }  
+    }
+    &-c{
+        @include md{
+            width:648px; 
+        }  
+    }
+    &-d{
+        @include md{
+            width:460px; 
+        }  
+    }
+}
+
+.tech-row-height{
+    @include lg{
+        height:50px; 
+    }  
+}
+
+.text-overlay-header{
+    position:absolute;
+    top: -300px;
+        &-a{
+            left:25px;
+            bottom:-50px;
+            z-index:100;
+        }
+        &-b{
+            top: -50px;
+        }
+}
+
+.background{
+    &-header{
+        @include image-background(url("../img/hero-graphicv2.png"),400px);
+    }
+    &-intro{
+        @include gradient-secondary-color;
+    }
+    &-bike{
+        @include image-background(url("../img/bike-graphic-background.png"),100%);
+    }
+    &-techSpec{
+        @include image-background(url("../img/tech-spec-background.png"),100%);
+    }
+    &-techSpec-large{
+        @include image-background(url("../img/tech-spec-background-large.png"),100%);
+    }
+
+    &-carousel{
+        @include image-background(url("../img/carousel-background.png"),100%);
+    }
+    &-signup{
+        @include gradient-secondary-color;
+    }
+    &-footer{
+        @include gradient-accent-color;
+    }
+}
+.row-dimentions{
+    @include row-dimentions(50px 0);
+    @include sm(){
+        @include row-dimentions;
+    }
+    &-a{
+        @include row-dimentions(40px 0, none);
+    }
+    &-b{
+        @include row-dimentions(50px 0);
+    }
+    &-c{
+        @include row-dimentions(100px 0 0 0);
+    }
+}
+
+//techSpecs
+.table-row-dimentions{
+    @include row-dimentions(none);
+    border-bottom:1px solid rgba(255, 255, 255, 0.4);
+    padding:20px;
+    
+}
+.text-spacing{
+    @include row-dimentions(0 0 15px 0 , none);
+    &-a{
+        @include row-dimentions(0 32px 20px 32px, none);
+    }
+    &-b{
+        @include row-dimentions(0 0 20px 0, none);
+    }
+    &-c{
+        @include row-dimentions(0 0 50px 0, none);
+    }
+    &-e{
+        @include row-dimentions(30px 32px 20px 32px, none);
+    }
+    @include sm(){
+        @include row-dimentions(0 0 30px 0 , none);
+        &-b{
+            @include row-dimentions(0 0 20px 0, none);
+        }
+    }
+    @include lg(){
+        &-a{
+            @include row-dimentions(0 32px 40px 32px, none);
+        }   
+        &-e{
+            @include row-dimentions(100px 32px 40px 32px, none);
+        } 
+    }
+    @include xxl{
+        &-c{
+            @include row-dimentions(0 0 100px 0, none);
+        }
+    }
+}
+
+//parallax background
+@include lg(){
+    .header{
+        position: relative;
+        overflow:hidden;
+    }
+
+    .parallax-container{
+        &-b{
+            position: relative;
+            top:-1300px;
+            @include xl{
+                top:-1290px;
+            } 
+            @include xxl{
+                top:-1320px;
+            } 
+        }
+        
+    }
+
+    .restrict-height{
+        height: 500px;
+    }
+
+    .text-parallax{
+        &-a-carousel{
+            @include parallax-text(0, 0, none, none, $color:$parallaxText);
+            @include secondary-font();
+            @include fontSize(8.5rem); 
+            @include xl{
+                @include fontSize(10rem);
+            } 
+            @include xxl{
+                @include fontSize(14rem);
+            }  
+        }
+        &-b-carousel{
+            padding-top:520px;
+            @include parallax-text(none, none, 0, -200px, $color:transparent);
+            @include secondary-font();
+            @include fontSize(8.5rem);
+            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: $parallaxText;   
+            @include xl{
+                @include fontSize(10rem);
+            } 
+            @include xxl{
+                @include fontSize(14rem);
+            } 
+        }
+
+        &-top{
+            @include parallax-text(0, 0, none, none, $color:$parallaxText);
+            @include secondary-font();
+            @include fontSize(8.5rem);
+            z-index:-2;
+            top:80px;
+            @include xl{
+                @include fontSize(10rem);
+            } 
+            @include xxl{
+                @include fontSize(14rem);
+            } 
+        }
+
+        &-bottom{
+            @include parallax-text(none, none, 0, none, $color:transparent);
+            @include secondary-font();
+            @include fontSize(8.5rem);
+            z-index:-2;
+            bottom:80px;
+            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: $parallaxText;
+            @include xl{
+                @include fontSize(10rem);
+            } 
+            @include xxl{
+                @include fontSize(14rem);
+            } 
+        }
+   
+        
+    }
+
+    .dims-bigger{
+        height: 100vh;
+    }
+
+    .marginDims{
+        margin-bottom: 200px;
+    }
+
+    .background-bike-repeat{
+        background-image:url("../img/bike-graphic-background-repeat.png");
+        overflow:hidden;
+        background-position: top center;
+        background-attachment:scroll;
+        background-size: 100vw;
+}
+
+    .background-bike-2-v1{
+        @include parallax-background(url("../img/bike-graphic-background-repeat.png"));
+    }
+
+    .bike-dims{
+        &-a{
+            z-index: 1;
+            @include lg(){
+                margin-top:50px;
+                margin-bottom:300px;
+            }
+            @include xl(){
+                margin-top:100px;
+            }
+        }
+    }
+}
+
+.icon-dims{
+    width:140px;
+    @include sm(){
+        width:160px;
+    }
+}
+
+.scene {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+    
+.viewer {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 100%;
+    background-image: url("../img/spriteLayoutv2.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    overflow: hidden;
+}
+
+.recaptcha{
+    transform:scale(0.77);
+    -webkit-transform:scale(0.77);
+    -moz-transform:scale(0.77);
+    -o-transform:scale(0.77);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+    @include mobSm(){
+        transform:scale(1);
+        -webkit-transform:scale(1);
+        -moz-transform:scale(1);
+        -o-transform:scale(1);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+        -moz-transform-origin:0 0;
+        -o-transform-origin:0 0;
+    }
+}
+
+
+.main-hero-container{
+    position: relative;
+    @include lg(){
+        width: 900px;
+        }
+    @include xl(){
+    width: 1050px;
+    }
+}
+
+.main-exploration-container{
+        position: absolute;
+        top: 190px;
+        z-index: 15;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        
+    @include sm(){
+        top: 250px;
+        }
+
+    @include xl(){
+        top: 120px;
+        right:0px;
+        left:0;
+        transform: translate(-0%, -0%);
+        -webkit-transform: translate(-0%, -0%);
+        -moz-transform: translate(-0%, -0%);
+        -o-transform: translate(-0%, -0%);
+        }
+    
+}

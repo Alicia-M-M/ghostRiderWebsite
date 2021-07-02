@@ -1,0 +1,63 @@
+$theme-colors: (
+    "dark":$secondary-color,
+);
+$navbar-dark-color:$primary-color;
+$navbar-dark-toggler-border-color:transparent;
+$navbar-toggler-padding-x:0px;
+$navbar-padding-x:42px;
+$navbar-padding-y:6px;
+$navbar-brand-font-size:2.5rem;
+$navbar-dark-hover-color:$primary-color;
+
+.navbar-brand{
+    @include accent-font($navbar-brand-font-size);
+}
+.navbar-toggler{
+    &:focus{
+    outline:none;
+    }
+}
+.nav-item{
+    transition:0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition:0.2s;
+    &:hover
+        {
+        @include secondary-font()
+        @include fontSize(1.5rem);
+    }
+}
+.navbar-nav .active > .nav-link{
+    @include secondary-font()
+    @include fontSize(1.5rem);
+}
+.item{
+    &-a{
+        width:270px;
+    }
+    &-b{
+        width:200px;
+    }
+    &-c{
+        width:125px;
+    }
+    &-d{
+        width:150px;
+    }
+}
+
+.zoom-brand{
+    -webkit-backface-visibility:hidden;
+    transition: transform .5s ease-in-out; 
+    -webkit-transition: transform .5s ease-in-out;
+    -moz-transition: transform .5 ease-in-out;
+    -o-transition: transform .5s ease-in-out;
+}
+
+.zoom-brand:hover {
+    transform: scale(1.1); 
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}

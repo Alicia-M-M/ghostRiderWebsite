@@ -1,0 +1,277 @@
+$primary-color:rgb(255, 255, 255);
+$secondary-color:#000000;
+$secondary-color-highlight:#282828;
+$accent-color:#FA3A08;
+$accent-color-highlight:#FF0043;
+$accent-color-hover-1:#be2904;
+$accent-color-hover-2:#8f0729;
+$secondary-color-hover-1:#020202;
+$secondary-color-hover-2:#3f3f3f;
+$transaprent-color-hover-1:#adabab00;
+$transaprent-color-hover-2:#ffffff2c;
+$parallaxText:rgb(201, 201, 201);
+$carousel-control-opacity:1;
+$carousel-control-hover-opacity:0.6;
+$carousel-control-color:$parallaxText;
+// padding margins and display
+$line-height-base:1.1;
+//breakpoints
+$xxsmall:322px;
+$xsmall:375px;
+$mobileSmall:440px;
+$shopifySmall:548px;
+$small:576px;
+$medium:768px;
+$large:992px;
+$x-large:1200px;
+$xx-large:1600px;
+@mixin xxs {
+    @media (min-width: #{$xxsmall}) {
+        @content;
+    }
+}
+@mixin xs {
+    @media (min-width: #{$xsmall}) {
+        @content;
+    }
+}
+@mixin mobSm {
+    @media (min-width: #{$mobileSmall}) {
+        @content;
+    }
+}
+@mixin shopifySmall {
+    @media (min-width: #{$xsmall}) {
+        @content;
+    }
+}
+@mixin sm {
+    @media (min-width: #{$small}) {
+        @content;
+    }
+}
+@mixin md {
+    @media (min-width: #{$medium}) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (min-width: #{$large}) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (min-width: #{$x-large}) {
+        @content;
+    }
+}
+@mixin xxl {
+    @media (min-width: #{$xx-large}) {
+        @content;
+    }
+}
+
+//centering items
+@mixin centerItem($left, $transform, $bottom){
+    position: absolute;
+    left: $left; 
+    transform: $transform;
+    bottom:$bottom;
+}
+
+// main fonts
+@mixin main-font(){
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+}
+@mixin primary-font(){
+    @include main-font();
+    letter-spacing:4px;
+    font-weight: 300;
+}
+@mixin secondary-font(){
+    @include main-font();
+    letter-spacing:5px;
+    font-weight: 900;
+}
+@mixin fontSize($size){
+    font-size: $size;
+}
+@mixin accent-font($size){
+    font-size: $size;
+    font-family: 'Yesteryear', cursive;
+    letter-spacing:0px;
+    font-weight:100;
+}
+// gradient color mixins
+@mixin gradient-accent-color(){
+    background-image: linear-gradient(to right, $accent-color, $accent-color-highlight);  
+}
+@mixin gradient-secondary-color(){
+    background-image: linear-gradient(to top, $secondary-color-highlight, $secondary-color);  
+}
+@mixin gradient-accent-hover-color(){
+    background-image: linear-gradient(to right, $accent-color-hover-1, $accent-color-hover-2);  
+}
+@mixin gradient-secondary-hover-color(){
+    background-image: linear-gradient(to right, $secondary-color-hover-1 ,$secondary-color-hover-2);  
+}
+@mixin gradient-transparent-hover-color(){
+    background-image: linear-gradient(to right,$transaprent-color-hover-1 ,$transaprent-color-hover-2);  
+}
+@mixin gradient-text() {
+    @include gradient-accent-color();
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+}
+@mixin gradient-split(){
+    background-image: -webkit-linear-gradient(-0deg, $secondary-color 0%, $secondary-color-highlight 50%, $accent-color-highlight 0%, $accent-color 90%);
+}
+
+//skewed edge
+@mixin skewed-edge($box-shadow:-4px 4px $primary-color, $border:2px $primary-color solid){
+    &:after{
+    background-color: transparent;
+    border:$border;
+    box-shadow: $box-shadow;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewx(-10deg);
+    -webkit-transform: skewx(-10deg);
+    -moz-transform: skewx(-10deg);
+    -o-transform: skewx(-10deg);
+    transform-origin: 100%;
+    -webkit-transform-origin: 100%;
+    -moz-transform-origin: 100%;
+    -o-transform-origin: 100%;
+    z-index: -1;
+    }
+}
+@mixin background-skewed($max-width, $padding, $background-color){
+    max-width:$max-width;
+    padding:$padding;
+    position:relative;
+    z-index: 1;
+    @include skewed-edge(none, none);
+        &:after{
+            background-color: $background-color;
+        }
+}
+//skewed edge button
+@mixin button-position(){
+    @include primary-font();
+    @include fontSize(1.5rem);
+    position:relative;
+    z-index: 1;
+}
+//skewed edge photo
+@mixin photoWrapper($left, $height, $bottom:100px){
+    position: relative;
+    padding: 0;
+    transform: skewx(-10deg);
+    -webkit-transform: skewx(-10deg);
+    -moz-transform: skewx(-10deg);
+    -o-transform: skewx(-10deg);
+    overflow: hidden;
+    left:$left;
+    height:$height;
+    bottom:$bottom;
+}
+@mixin photoImg($width, $right){
+    position: relative;
+    width:$width;
+    right:$right;
+    transform: skewx(10deg);
+}
+//hover states
+@mixin hover-state(){
+    transform:translateY(4px) translateX(-4px);
+    -webkit-transform:translateY(4px) translateX(-4px);
+    -moz-transform:translateY(4px) translateX(-4px);
+    -o-transform:translateY(4px) translateX(-4px);
+    -webkit-backface-visibility:hidden;
+
+    &:after{
+    box-shadow: none;
+    -webkit-backface-visibility:hidden;
+    }
+}
+//link transitions
+@mixin transitions($color:$primary-color){
+    opacity:0.6;
+    transition: ease-in-out 0.2s;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+    color:$color;
+}
+//svg styling
+.svg-hover-state:hover{
+    @include transitions();
+}
+.svg-margin-a{
+    margin-bottom: 2px;
+}
+
+.iconSize{
+    font-size:2rem;
+}
+
+.bars{
+    font-size:1.6rem;
+}
+
+// hide/show
+
+.hide-col, .hide-carousel, .bike-info-lg, .text-overlay-header{
+    display: none;
+    @include lg() { 
+        display: block;
+    }
+}
+
+.hide-carousel-mobile, .bike-info-mobile, .mobile-text-overlay-header-a  {
+    display: block;
+    @include lg() { 
+        display: none;
+    }
+}
+
+.xl-shopify {
+    display: none;
+    @include xl() { 
+        display: block;
+    }
+}
+
+.sm-shopify {
+    display: block;
+    @include xl() { 
+        display: none;
+    }
+}
+
+.counter {
+    display: none;
+    @include sm() { 
+        display: block;
+    }
+}
+
+.counter-small {
+    display: block;
+    @include sm() { 
+        display: none;
+    }
+}
+
+
+

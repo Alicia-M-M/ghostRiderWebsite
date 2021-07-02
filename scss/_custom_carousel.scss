@@ -1,0 +1,165 @@
+//desktop
+.inner-item{
+    @include background-skewed(none, 100px 10px,none);
+    height:450px;
+    right:-25px;
+    z-index:14;
+    &:after{
+        @include gradient-secondary-color;
+        box-shadow: -13px 13px $accent-color;
+    }
+}
+.inner-item-b{
+    position: absolute;
+    left:-13px;
+    padding: 0;
+    @include background-skewed(none, 0 10px,none);
+    height:450px;
+    z-index: 0;
+    &:after{
+        @include gradient-accent-color;
+        box-shadow: -13px 13px $accent-color;
+    }
+}
+.image-wrapper{
+    &-a{
+        @include photoWrapper(19px, 550px);
+    }
+    &-b{
+        @include photoWrapper(19px, 550px);
+    }
+    &-c{
+        @include photoWrapper(19px, 550px);
+    }
+
+}
+.img-skewed{
+    &-a{
+        @include image-background(url("../img/bike-carousel.png"), 100%);
+        @include photoImg(550px, 50px);
+    }
+    &-b{
+        @include image-background(url("../img/bike-carousel-2-v1.png"), 100%);
+        @include photoImg(550px, 80px);
+    }
+    &-c{
+        @include image-background(url("../img/bike-carousel-3-v1.png"), 100%);
+        @include photoImg(550px, 100px);
+    }
+    @include xl{
+        &-a{
+            @include photoImg(550px, 50px);
+        }
+        &-b{
+            @include photoImg(550px, 50px);
+        }
+        &-c{
+            @include photoImg(550px, 40px);
+        }
+    }
+    @include xxl{
+        &-a{
+            @include photoImg(550px, -20px);
+        }
+    }
+}
+
+.carousel-boxes{
+    position:relative;
+    height:450px;
+    .text-overlay-carousel{
+        @include centerItem(50%, translate(-50%, 50%), 50%);
+        z-index: 15;
+    }
+}
+
+//mobile
+.bike-image-container{
+    height:30px;
+    &-b{
+        height:85px;
+        @include xs(){
+            height:110px;
+        }
+        @include mobSm(){
+            height:150px;
+        }
+    }
+    @include sm(){
+        height:60px;
+        &-b{
+            height:170px;
+        }
+    }
+    @include md(){
+        height:80px;
+        &-b{
+            height:200px;
+        }
+    }
+}
+
+.centered-bike{
+    @include centerItem(50%,translate(-50%,0),0px);
+}
+.max{
+    &-sentence{
+        margin-top:30px;
+        max-width:250px;
+        @include mobSm(){
+            max-width:600px;
+        }
+    }
+    &-paragraph{
+        height:100px;
+        margin-top:20px;
+        margin-bottom:20px;
+        @include xs(){
+            height:80px; 
+        }
+    }
+}
+
+
+
+//desktop and mobile
+.carousel-item{
+    width:100%;
+}
+
+.carousel{
+    //lg below
+        .carousel-control-next, .carousel-control-prev {
+            top:50%;
+        }
+    //lg above
+    @include lg(){
+        max-width:1800px;
+        .carousel-control-next {
+            top:0;
+            right: 40px;
+            @include xl(){
+                right: 50px;
+            }
+            @include xxl(){
+                right: 100px;
+            }
+        }
+        .carousel-control-prev {
+            top:0;
+            left: 40px;
+            @include xl(){
+                right: 50px;
+            }
+            @include xxl(){
+                left: 100px;
+            }
+        }
+        &-inner{
+            height:600px;
+        }
+        &-item{
+            height:600px;
+        }
+    }
+}

@@ -1,0 +1,219 @@
+$paragraph-margin-bottom:0px;
+$headings-margin-bottom:0px;
+
+.hero-message {
+    &-a{
+        @include gradient-text;
+        @include primary-font();
+        @include fontSize(1.8rem);
+    }
+    &-b{
+        @include secondary-font();
+        @include fontSize(2.2rem);
+    }
+    &-c{
+        @include secondary-font();
+        @include fontSize(2rem);
+    }
+    &-d{
+        @include accent-font(4.5rem);
+        position: absolute;
+        top: -200px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+    &-e{
+        @include secondary-font();
+        @include fontSize(3rem);
+    }
+    @include sm(){
+        &-a{
+            @include fontSize(6rem);
+        }
+        &-b{
+            @include fontSize(5rem);
+        }
+        &-c{
+            @include fontSize(3rem);
+        }
+        &-d{
+            @include accent-font(8rem);
+            top: -20px;
+        }
+        &-e{
+            @include fontSize(4rem);
+        }
+    }
+    @include md(){
+        &-c{
+            @include fontSize(3.8rem);
+        }
+        &-d{
+            top: 0;
+            left: 0%;
+            transform: translate(0%, 0%);
+            -webkit-transform: translate(0%, 0%);
+            -moz-transform: translate(0%, 0%);
+            -o-transform: translate(0%, 0%);
+            margin-top:-90px;
+            left:-20px;
+        }
+    }
+    @include xl(){
+        &-b{
+            @include fontSize(9rem);
+        }
+    }
+    @include xxl(){
+        &-b{
+            @include fontSize(9rem);
+        }
+    }
+}
+h2 {
+    @include accent-font(4rem);
+}
+h3 {
+    @include secondary-font();
+    @include fontSize(1.4rem);
+    @include sm{
+        @include fontSize(2.25rem);
+    }
+}
+.header-text{
+        @include secondary-font();
+        @include fontSize(1.4rem);
+        &-gradient{
+            @include gradient-text;
+        }
+        &-a {
+            @include primary-font();
+            @include fontSize(1.4rem);
+        }
+        &-b {
+            @include primary-font();
+            @include fontSize(1.4rem);
+        }
+        &-c{
+            @include gradient-text;
+        }
+        @include sm{
+            @include fontSize(2.25rem);
+        &-a {
+            @include fontSize(2.25rem);
+        }
+        &-b {
+            @include fontSize(2.25rem);
+        }
+        }
+}
+.revolution-xxs{
+    @include fontSize(1rem);
+    @include xxs(){
+    @include fontSize(1.4rem);
+    }
+    @include sm(){
+        @include fontSize(2.25rem);
+    }
+}
+.tech-xxs{
+    @include fontSize(1rem);
+    @include xxs(){
+    @include fontSize(1.4rem);
+    }
+    @include lg(){
+        @include fontSize(1.5rem);
+    }
+    @include xl(){
+        @include fontSize(2rem);
+    }
+    @include xxl(){
+        @include fontSize(2.25rem);
+    }
+}
+h4 {
+    @include secondary-font();
+    @include fontSize(1.2rem);
+            @include sm{
+                @include fontSize(1.5rem);
+        }
+
+}
+h5 {
+    @include primary-font();
+    @include fontSize(0.7rem);
+            @include sm(){
+                @include fontSize(1.1rem);
+        }
+}
+
+.table-headers{
+    @include secondary-font();
+    @include fontSize(0.8rem);
+    @include sm(){
+        @include fontSize(1.1rem);
+    }
+}
+h6 {
+    @include primary-font();
+    @include fontSize(0.6rem);
+    @include sm(){
+        @include fontSize(1rem);
+    }
+}
+
+.background-text{
+        @include background-skewed(200px, 20px 0, $secondary-color)
+        @include sm(){
+            @include background-skewed(200px, 40px 0, $secondary-color)
+            max-width:650px;
+        }
+        &-a{
+            @include background-skewed(800px, 5px 5px, $secondary-color)
+            @include sm(){
+                @include background-skewed(800px, 30px 30px, $secondary-color)
+            }
+        }
+        &-b{
+            @include sm(){
+                @include background-skewed(1200px, 55px 50px, none)
+                &:after{
+                    @include gradient-accent-color;
+                }
+            }
+        }
+        &-c{
+            @include shopifySmall(){
+                width:375px;
+            }
+            @include sm(){
+                width:499px;
+            }
+            @include md(){
+                background:$primary-color;
+            }
+            @include xl(){
+                width:1050px;
+            }
+        }
+    }
+    
+    .shopify-container{
+        position: relative;
+        background:$primary-color;
+        @include md(){
+            background:none;
+        }
+    }
+
+    .counterContainer{
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right:0px;
+    }
+    

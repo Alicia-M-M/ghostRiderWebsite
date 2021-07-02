@@ -1,0 +1,145 @@
+$body-color:$primary-color;
+$btn-focus-box-shadow:none;
+$input-focus-box-shadow:none;
+$btn-padding-y:10px;
+$btn-padding-x:36px;
+$input-border-radius: none;
+$input-padding-y:20px;
+$link-color:$primary-color;
+$link-hover-color:$primary-color;
+$link-hover-decoration:none;
+$form-feedback-margin-top:10px;
+$form-feedback-font-size:0.8rem;
+
+//new buttons
+.btn{
+    &-a{
+        @include skewed-edge();
+        @include button-position();
+        &:hover{
+            @include hover-state;
+        }  &:hover:after{
+            @include gradient-transparent-hover-color();
+        }
+        
+    }
+    &-b{
+        @include skewed-edge();
+        @include button-position();
+        &:hover{
+            @include hover-state();
+        }
+        &:after{
+            @include gradient-secondary-color();
+        }
+        &:hover:after{
+            @include gradient-secondary-hover-color();
+        }
+    }
+    &-c{
+        @include skewed-edge();
+        @include button-position();
+        &:hover{
+            @include hover-state();
+        }
+        &:after{
+            @include gradient-accent-color();
+        }
+        &:hover:after{
+            @include gradient-accent-hover-color();
+        }
+    }
+    &-d{
+        @include skewed-edge();
+        @include button-position();
+        &:after{
+            @include gradient-accent-color();
+            border: none;
+            box-shadow:none;
+        }
+        &:hover:after{
+            @include gradient-accent-hover-color();
+        }
+    }
+}
+//subscribe
+.invalid-feedback, .valid-feedback{
+    @include secondary-font();
+    @include fontSize(1rem);
+}
+footer{
+    .form-control{
+    background-color: transparent;
+    border:none;
+    color:$primary-color !important;
+    @include primary-font();
+    @include fontSize(1rem);
+        &::placeholder{
+            color:$primary-color;
+        }
+        &::-webkit-input-placeholder{
+            color:$primary-color;
+            opacity:0.6;
+            }
+        &:focus{
+            background-color: transparent;
+        }
+        &:invalid, &:valid{
+            color:$primary-color;
+        }
+    }
+    input[type=email]:focus{
+        color:$primary-color;
+    }
+    .was-validated .form-control{
+        &:invalid{
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='white' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='white' stroke='none'/%3e%3c/svg%3e");
+            &:focus{
+                box-shadow:none;
+            }
+        }
+        &:valid{
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='white' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+            &:focus{
+                box-shadow:none;
+            }
+        }
+    }
+    a:hover{
+        @include transitions();
+    }
+}
+
+.subscribe-container{
+    form{
+        max-width: 912px;
+    }
+    .input-group > .form-control, .input-group > .form-control-plaintext, .input-group > .custom-select, .input-group > .custom-file{
+        letter-spacing:4px;
+        @include fontSize(1rem);
+        transform: skewx(-10deg);
+        -webkit-transform: skewx(-10deg);
+        -moz-transform: skewx(-10deg);
+        -o-transform: skewx(-10deg);
+        padding: 22px 20px;
+        border:none;
+        width:100%;
+        @include sm(){
+            width: 0%;
+            }
+    }
+        .input-group-append{
+            margin-top:0px;
+            .btn{
+                border:none;
+            }
+        }
+}
+
+.offset-button-mobile{
+    margin-top:150px;
+    @include sm(){
+        margin-top:0px;
+    }
+}
+
